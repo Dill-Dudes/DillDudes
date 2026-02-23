@@ -1,0 +1,306 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dill Dudes Pickles</title>
+  <meta name="description" content="Dill Dudes — bold, crunchy pickles made fresh in small batches." />
+
+  <style>
+    :root {
+      --bg: #f4fff4;
+      --card: #ffffff;
+      --text: #1f3d2b;
+      --muted: #5f8f6f;
+      --brand: #5fd38d;
+      --brand-dark: #3da86a;
+      --border: #cfe9d7;
+      --radius: 16px;
+      --max: 1080px;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    a { text-decoration: none; color: inherit; }
+
+    .wrap {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 24px;
+    }
+
+    /* Header */
+    header {
+      background: #e9fbea;
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 800;
+      font-size: 1.2rem;
+    }
+    .logo-badge{
+      width: 50px; height: 50px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, rgba(124,255,122,.9), rgba(38, 185, 19, 0.9));
+      box-shadow: var(--shadow);
+      background-image: url("https://examples.ratings.md/5thstreet/images/archive/dill-logo.png");
+      background-size: 50px 50px;
+      display:grid; place-items:center;
+      color: #051f0b;
+      font-weight: 900;
+    }
+    .logo span {
+      font-size: 1.6rem;
+    }  
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 12px;
+      padding: 0;
+      margin: 0;
+    }
+
+    nav a {
+      padding: 8px 12px;
+      border-radius: 999px;
+      color: var(--muted);
+    }
+
+    nav a:hover {
+      background: var(--brand);
+      color: white;
+    }
+
+    /* Hero */
+    .hero {
+      padding: 60px 0 40px;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: clamp(36px, 5vw, 56px);
+      margin-bottom: 12px;
+    }
+
+    .hero p {
+      max-width: 600px;
+      margin: 0 auto 24px;
+      color: var(--muted);
+      font-size: 1.1rem;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 20px;
+      border-radius: 12px;
+      background: var(--brand);
+      color: white;
+      font-weight: 600;
+    }
+
+    .btn:hover {
+      background: var(--brand-dark);
+    }
+
+    section {
+      padding: 40px 0;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 24px;
+      font-size: 2rem;
+    }
+
+    .grid {
+      display: grid;
+      gap: 16px;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 20px;
+    }
+
+    .price {
+      font-size: 1.8rem;
+      font-weight: 800;
+      color: var(--brand-dark);
+    }
+
+    /* Contact */
+    form {
+      display: grid;
+      gap: 12px;
+    }
+
+    input, textarea {
+      padding: 12px;
+      border-radius: 10px;
+      border: 1px solid var(--border);
+      font-size: 1rem;
+    }
+
+    textarea {
+      min-height: 120px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      margin-top: 40px;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="wrap nav"
+       style="background-image: url('https://examples.ratings.md/5thstreet/images/archive/dill-logo.png');
+              background-size: 50px 50px;
+              background-repeat: no-repeat;
+              background-position: left center;
+              padding-left: 70px;"
+              >
+              
+    <div class="logo">Dill Dudes</div>
+
+    <nav>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#products">Pickles</a></li>
+        <li><a href="#pricing">Prices</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+<main class="wrap">
+
+  <section class="hero">
+    <h1>Dill Dudes Pickles</h1>
+    <p>
+      Loud crunch. Big dill energy.  
+      Small-batch pickles made fresh with real ingredients and zero nonsense.
+    </p>
+    <a class="btn" href="#products">See the Pickles</a>
+  </section>
+
+  <section id="about">
+    <h2>About Dill Dudes</h2>
+    <div style="border: 5px solid #f4fff4;"></div>
+    <div class="grid">
+      <div class="card">
+        <h3>Serious Crunch</h3>
+        <p>
+          We cold-pack our pickles so every bite snaps back. No soggy spears allowed.
+        </p>
+      </div>
+      <div class="card">
+        <h3>Real Ingredients</h3>
+        <p>
+          Cucumbers, vinegar, dill, garlic, salt, spices. That’s it.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="products">
+    <h2>Our Pickles</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Classic Dill</h3>
+        <p>Crunchy, Delicious, and Endlessly Snackable.</p>
+      </div>
+      <div class="card">
+        <h3>Spicy Heat</h3>
+        <p>Heat + Crunch = Elite Pickle Flavor.</p>
+      </div>
+      <div class="card">
+        <h3>Sweet Stuff</h3>
+        <p> This Is The Perfect Pick(le) for late-night fridge raids.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="pricing"><div style="border: 5px solid #f4fff4;"></div>
+    <h2>Prices</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Single Jar</h3>
+        <div class="price">$4.99</div>
+        <p>16 oz Jar, Any Flavor.</p>
+      </div>
+      <div class="card">
+        <h3>3-Jar Bundle</h3>
+        <div class="price">$13.99</div>
+        <p>Mix & Match Favorites.
+          (6% Discount)
+        </p>
+      </div>
+      <div class="card">
+        <h3>Wholesale Pack</h3>
+        <div class="price">$89.99</div>
+        <p>20 Jars For Big Pickle Parties
+          (10% Dicount).</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact"><div style="border: 5px solid #f4fff4;"></div>
+    <h2>Contact the Dudes</h2>
+    <div class="card">
+      <form
+  action="https://formspree.io/f/mreaeozb"
+  method="POST">
+  <label>Your email:
+    <input type="email" name="email"></label>
+    <label></label>
+    Your message
+        <textarea name="Orders, Produce, Custom Labels, etc." ></textarea>
+          <button class="btn" type="submit">Send</button>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer>
+  © <span id="year"></span> Dill Dudes Pickles 🥒
+ 
+</footer>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
